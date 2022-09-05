@@ -6,11 +6,15 @@ const EditReply = require("../../Systems/EditReply");
 
     module.exports = {
 
-        data: new SlashCommandBuilder()
+        name: "reboot"
 
-        .setName('reboot')
+        description: "Reboot command",
+        UserPerms: ["Manageguild"]
+        
 
-        .setDescription('Reboot the bot (DANGEROUS)'),
+        
+
+
 
         /**
 
