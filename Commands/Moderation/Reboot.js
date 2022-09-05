@@ -6,10 +6,10 @@ const EditReply = require("../../Systems/EditReply");
 
     module.exports = {
 
-        name: "reboot"
+        name: "reboot",
 
         description: "Reboot command",
-        UserPerms: ["Manageguild"]
+        UserPerms: ["Manageguild"],
         
 
         
