@@ -9,7 +9,7 @@ const EditReply = require("../../Systems/EditReply");
         name: "reboot",
 
         description: "Reboot command",
-        UserPerms: ["Manageguild"],
+        UserPerms: ["ManageGuild"],
         
 
         
