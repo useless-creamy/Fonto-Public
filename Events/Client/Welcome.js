@@ -2,7 +2,7 @@ const { Client, GuildMember, EmbedBuilder } = require("discord.js");
 const DB = require("../../Structures/Schemas/Welcome");
 
 module.exports = {
-   name: "guildMemberAdd"
+   name: "guildMemberAdd",
   
   /**
   * @param {GuildMember} member
