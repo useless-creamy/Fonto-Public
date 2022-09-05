@@ -5,7 +5,7 @@ function EditReply(interaction, description, emoji) {
     interaction.editReply({
         embeds: [
             new EmbedBuilder()
-            .setColor("Blue")
+            .setColor("Random")
             .setDescription(`${description} ${emoji}`)
         ],
         ephemeral: true
