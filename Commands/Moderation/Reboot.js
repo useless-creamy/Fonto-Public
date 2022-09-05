@@ -2,6 +2,7 @@
 
     const { SlashCommandBuilder, ChatInputCommandInteraction, CommandInteraction, PermissionFlagsBits } = require('discord.js');
     require("dotenv").config()
+const EditReply = require("../../Systems/EditReply");
 
     module.exports = {
 
