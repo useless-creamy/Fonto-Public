@@ -5,6 +5,9 @@ const {
     Client
 } = require("discord.js");
 const ms = require("ms");
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord.js');
+
 
 
 /**
@@ -12,11 +15,15 @@ const ms = require("ms");
  */
 module.exports = async (client, PG, Ascii) => {
 
+
+ 
     const Table = new Ascii("Commands Loaded");
 
     let CommandsArray = [];
 
     const commandFiles = await PG(`${(process.cwd().replace(/\\/g, "/"))}/Commands/*/*.js`);
+
+   
 
     commandFiles.map(async (file) => {
 
@@ -32,19 +39,22 @@ module.exports = async (client, PG, Ascii) => {
         CommandsArray.push(command);
 
         await Table.addRow(command.name, "SUCCESSFUL");
-    });
+    
 
     console.log(Table.toString())
-
-    client.on("ready", () => {
+    
+    client.on("ready", async () => {
 
         setInterval(() => {
 
             client.guilds.cache.forEach(guild => {
 
                 guild.commands.set(CommandsArray)
-            })
-
-        }, ms("5s"))
+            });
+        });
     });
-};
+
+  
+    });
+  };
+

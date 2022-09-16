@@ -20,7 +20,7 @@ client.events = new Collection();
 client.commands = new Collection();
 
 
-const Handlers = ["Events", "Commands", "Errors", "EventsStack"]
+const Handlers = ["Events", "Commands", "Errors"]
 
 Handlers.forEach(Handler => {
 

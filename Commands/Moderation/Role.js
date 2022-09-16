@@ -60,7 +60,7 @@ module.exports = {
 
                 if(guild.members.me.roles.highest.position <= Target.roles.highest.position) return EditReply(interaction, "This user that your're givivng the role to, is higher then Fonto!");
 
-                if(Target.roles.cache.find(r => r.id === Role.id)) return EditReply(interaction, `${Target} already has that role...`);
+                if(Target.roles.cache.find(r => r.id === Role.id)) return EditReply(interaction, `${Target} doesn't have that role!`);
 
                 await Target.roles.add(Role)
 

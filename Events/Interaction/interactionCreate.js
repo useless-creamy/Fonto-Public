@@ -1,7 +1,7 @@
 const { Client, ChatInputCommandInteraction, InteractionType } = require("discord.js");
 const { ApplicationCommand } = InteractionType;
 
-const EditReply = require("../../Systems/Reply");
+const Reply = require("../../Systems/Reply");
 
 module.exports = {
     name: "interactionCreate",
@@ -19,6 +19,7 @@ module.exports = {
         if (type !== ApplicationCommand) return;
 
         const command = client.commands.get(commandName);
+
 
         if(!command) return Reply(interaction, "An error occured while executing this command.", true) && client.command.delete(commandName);
         if(command.UserPerms && command.UserPerms.length !== 0) if (!member.permissions.has(command.UserPerms)) return EditReply(interaction, `You need \`${command.UserPerms.join(", ")}\` permissions(s) to execute this command.`, true);

@@ -4,15 +4,30 @@
   "description": "",
   "main": "./Structures/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_OPTIONS=--max_old_space_size=4096 next dev",
+      "ng": "ng",
+      "start": "node ./Structures/main",
+      "build": "ng",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/rest": "^1.1.0",
     "ascii-table": "^0.0.9",
+    "axios": "^0.27.2",
+    "canvacord": "^5.4.7",
+    "chalk": "^4.1.2",
+    "discord-backup": "^3.2.1",
     "discord.js": "^14.3.0",
     "dotenv": "^16.0.2",
     "glob": "^7.2.0",
-    "mongoose": "^6.5.4"
+    "iso-639-1": "^2.1.15",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.4",
+    "translate-google": "^1.5.0"
   }
 }

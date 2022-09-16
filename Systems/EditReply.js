@@ -1,15 +1,15 @@
 const { EmbedBuilder } = require("discord.js");
 
-function EditReply(interaction, description, emoji) {
+function Reply(interaction, description, type, emoji) {
 
-    interaction.editReply({
+    interaction.reply({
         embeds: [
             new EmbedBuilder()
-            .setColor("Random")
+            .setColor("Blue")
             .setDescription(`${description} ${emoji}`)
         ],
-        ephemeral: true
+        ephemeral: type
     })
     
 }
-module.exports = EditReply
+module.exports = Reply
